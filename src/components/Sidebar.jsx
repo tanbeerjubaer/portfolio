@@ -3,21 +3,21 @@ import avatar from "../assets/avatar.jpeg";
 
 const Sidebar = () => {
   return (
-    <div className="flex flex-col justify-start items-center gap-8 pt-8">
-      <div className="h-40 w-40 rounded-full p-2 border border-gray-300 overflow-hidden p-2">
+    <div className="flex flex-col justify-start items-center gap-4 lg:gap-8 pt-4 lg:pt-8 px-4 lg:px-0">
+      <div className="h-24 w-24 lg:h-40 lg:w-40 rounded-full p-2 border border-gray-300 overflow-hidden">
         <img src={avatar} className="object-center scale-[1.2]" />
       </div>
 
-      <div className="w-full pl-20">
-        <h1 className="text-xl font-medium">{sidebar.name}</h1>
-        <p className="leading-5 text-neutral-600">{sidebar.description}</p>
+      <div className="w-full lg:pl-20 text-center lg:text-left">
+        <h1 className="text-xl lg:text-2xl font-medium">{sidebar.name}</h1>
+        <p className="leading-6 text-neutral-600 text-base lg:text-lg">{sidebar.description}</p>
 
-        <div className="mt-6">
+        <div className="mt-4 lg:mt-6 space-y-2 lg:space-y-0">
           {sidebar.locations.map((item, index) => {
             return (
               <div
                 key={index}
-                className="flex justify-start items-center gap-2">
+                className="flex justify-center lg:justify-start items-center gap-2 text-base lg:text-lg">
                 <svg
                   stroke="currentColor"
                   fill="currentColor"
@@ -32,7 +32,7 @@ const Sidebar = () => {
               </div>
             );
           })}
-          <div className="flex justify-start items-center gap-2">
+          <div className="flex justify-center lg:justify-start items-center gap-2 text-base lg:text-lg">
             <svg
               stroke="currentColor"
               fill="currentColor"
@@ -48,7 +48,7 @@ const Sidebar = () => {
           </div>
 
           {sidebar.linkedin ? (
-            <div className="flex justify-start items-center gap-2">
+            <div className="flex justify-center lg:justify-start items-center gap-2 text-base lg:text-lg">
               <svg
                 stroke="currentColor"
                 fill="currentColor"
@@ -64,7 +64,7 @@ const Sidebar = () => {
           ) : null}
 
           {sidebar.github ? (
-            <div className="flex justify-start items-center gap-2">
+            <div className="flex justify-center lg:justify-start items-center gap-2 text-base lg:text-lg">
               <svg
                 stroke="currentColor"
                 fill="currentColor"
@@ -80,7 +80,7 @@ const Sidebar = () => {
           ) : null}
 
           {sidebar.kaggle ? (
-            <div className="flex justify-start items-center gap-2">
+            <div className="flex justify-center lg:justify-start items-center gap-2 text-base lg:text-lg">
               <svg
                 stroke="currentColor"
                 fill="currentColor"
@@ -96,7 +96,7 @@ const Sidebar = () => {
           ) : null}
 
           {sidebar.googleScholar ? (
-            <div className="flex justify-start items-center gap-2">
+            <div className="flex justify-center lg:justify-start items-center gap-2 text-base lg:text-lg">
               <svg
                 stroke="currentColor"
                 fill="currentColor"

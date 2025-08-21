@@ -12,15 +12,15 @@ import CV from "./pages/CV"; // Import CV page
 
 function App() {
   return (
-    <div className="cormorant-garamond-regular text-lg min-w-[1280px]">
+    <div className="cormorant-garamond-regular text-base">
       <Header />
-      <div className="grid grid-cols-12">
-        <div className="col-span-3">
-          <div className="sticky top-0 left-0">
+      <div className="grid grid-cols-1 lg:grid-cols-12">
+        <div className="col-span-1 lg:col-span-3">
+          <div className="lg:sticky lg:top-0 lg:left-0">
             <Sidebar />
           </div>
         </div>
-        <div className="col-span-6 pl-10 py-10">
+        <div className="col-span-1 lg:col-span-7 px-4 lg:pl-10 py-6 lg:py-10">
           <Routes path="portfolio/*">
             <Route path="/" element={<Home />} />
             <Route path="/portfolio" element={<Home />} />

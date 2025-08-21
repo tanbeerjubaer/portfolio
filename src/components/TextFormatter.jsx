@@ -5,7 +5,7 @@ import remarkGfm from "remark-gfm";
 // eslint-disable-next-line react/prop-types
 const TextFormatter = ({ text }) => {
   return (
-    <div>
+    <div className="text-base lg:text-lg leading-relaxed">
       <ReactMarkdown remarkPlugins={[remarkGfm]}>{text}</ReactMarkdown>
     </div>
   );
